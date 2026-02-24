@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimal Güvenli Tarayıcı</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="toolbar">
+    <button id="backBtn">←</button>
+    <button id="forwardBtn">→</button>
+    <input id="urlInput" type="text" placeholder="URL girin (örn: example.com)" />
+    <button id="goBtn">Git</button>
+    <button id="settingsBtn">Ayarlar</button>
+  </header>
+
+  <main>
+    <iframe id="view" title="browser-view"></iframe>
+    <aside class="history-panel">
+      <div class="history-head">
+        <h3>Geçmiş</h3>
+        <button id="clearHistoryBtn">Temizle</button>
+      </div>
+      <ul id="historyList"></ul>
+    </aside>
+  </main>
+
+  <dialog id="settingsDialog">
+    <form id="settingsForm" method="dialog">
+      <h3>Özel Ayarlar</h3>
+      <label>DNS Sunucusu
+        <input id="dnsServer" type="text" placeholder="1.1.1.1" required />
+      </label>
+      <label class="toggle">
+        <input id="adBlockEnabled" type="checkbox" />
+        Güçlü reklam engelleme + sahte buton koruması
+      </label>
+      <div class="actions">
+        <button value="cancel">İptal</button>
+        <button id="saveSettings" value="default">Kaydet</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="/app.js"></script>
+</body>
+</html>
