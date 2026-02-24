@@ -1,0 +1,10 @@
+{
+  "name": "minimal-secure-browser",
+  "version": "1.0.0",
+  "description": "Minimal web browser with history, DNS settings and ad-blocking proxy",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "type": "commonjs"
+}
